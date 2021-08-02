@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelpDesk</title>
+  </head>
+  <body onload="fetchIssues()">
+    <script type = 'text/javascript' src = 'main.js'></script>
+    <div class= 'container'>
+        <h1>Help Desk <small>by Anirudh</small></h1>
+        <div class = 'sendissue'>
+            <h2>Add new Issue</h2>
+            <h4><b>Description:</b></h4>
+            <form>
+                <input type = 'text' id = 'describe' placeholder="Describe your issue">
+                <H2>Severity</H2>
+                <input list='sevType'>
+                <datalist id = 'sevType'>
+                    <option value = "Low">
+                    <option value = "Medium">
+                    <option value = "High">
+                </datalist>
+                <h2 class = 'tobenamed'>Assigned to:</h2>
+                <input list = 'assignTo'>
+                <datalist id = 'assignTo'>
+                    <option value = "General Issue">
+                    <option value = "">
+                    <option value = "">
+                    <option value = "">
+                    <option value = "">
+                </datalist>
+                <br><br>
+                <input id = 'addissue' type = 'button' value ='Add'>
+            </form>
+        </div>
+
+        <div class = 'issue'>
+            <h4>Issue ID: </h4>
+            <button>Open</button>
+            <h4>ISSUE</h4>
+            <div class = 'priority'>
+                
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
