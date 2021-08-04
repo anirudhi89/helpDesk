@@ -1,0 +1,38 @@
+.sendissue {
+    margin: auto;
+    text-align: left;
+    background-color: lightgray;
+    height: 700px;
+    width: 800px;
+    border-radius: 0.5%;
+}
+
+.issuelog {
+    margin: auto;
+    text-align: left;
+    background-color: lightgray;
+    height: 200px;
+    width: 800px;
+    border-radius: 0.5%;
+}
+
+small {
+    font-size: 15px;
+    
+}
+
+input:not(#addissue), select {
+    height: 30px;
+    width: 700px;
+}
+
+
+#addissue {
+    height: 35px;
+    width: 70px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 10%;
+    border: none;
+
+}

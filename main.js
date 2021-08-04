@@ -1,0 +1,4 @@
+
+function AddIssue() {
+    alert("Added");
+}
