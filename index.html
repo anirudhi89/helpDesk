@@ -4,50 +4,56 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel = 'stylesheet' href = 'style.css'>
+    <!-- <link rel = 'stylesheet' href = 'style.css'> -->
     <title>HelpDesk</title>
   </head>
-  <body onload="fetchIssues()">
-    <script src = 'main.js'></script>
-    <div class= 'container'>
-        <h1>Help Desk <small>by Anirudh</small></h1>
-        <div class = 'sendissue'>
-          <br><br>
-            <h1>Add New Issue: </h1>
-            <h2><b>Description:</b></h2>
-            <form>
-                <input type = 'text' id = 'describe' placeholder="Describe your issue">
-                <H2>Severity</H2>
-                <select id = 'sevType'>
-                    <option value = "Low" selected>Low</option>
-                    <option value = "Medium">Medium</option>
-                    <option value = "High">High</option>
-                </select>
-                <h2 class = 'tobenamed'>Assigned to:</h2>
-                <input list = 'assignTo' placeholder = "Enter responsible">
-                <datalist id = 'assignTo'>
-                    <option value = "General Issue">
-                    <option value = "">
-                    <option value = "">
-                    <option value = "">
-                    <option value = "">
-                </datalist>
-                <br><br>
-                <input id = 'addissue' type = 'button' value ='Add' onclick='AddIssue()'>
-            </form>
-        </div>
 
-        <div class = 'issuelog'>
-            <h4>Issue ID: </h4>
-            <button>Open</button>
-            <h4>ISSUE</h4>
-            <div class = 'priority'>
-                <h1>test</h1>
-            </div>
+  <body onload="fetchIssues()">
+    <div class="container">
+      <h1>Help Desk Tool <small>by Anirudh</small></h1>
+      <div class="bg-light p-5 rounded-lg m-3">
+        <h3>Add New Issue:</h3>
+        <form id="issueInputForm">
+          <div class="form-group">
+            <label for="issueDescInput">Description</label>
+            <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
+          </div>
+          <div class="form-group">
+            <label for="issueDescInput">Severity</label>
+             <select class="form-control" id="issueSeverityInput">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select> 
+          </div>
+          <div class="form-group">
+            <label for="issueDescInput">Assigned To</label>
+            <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter responsible ...">
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="issuesList">
+          </div>
         </div>
+      </div>
+      <div class="footer">
+        <p></p>
+      </div>
     </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src = 'main.js'></script>
 
   </body>
 </html>
